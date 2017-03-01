@@ -18,8 +18,8 @@ var Leaderboard = React.createClass({
     query.on('ready', update);
     query.on('changed', update);
 
-    function update() {
-      comp.setState({players: query.results});
+    function update(results) {
+      comp.setState({players: results});
     }
   },
 

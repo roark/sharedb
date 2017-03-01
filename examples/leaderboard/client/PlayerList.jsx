@@ -9,7 +9,8 @@ var PlayerList = React.createClass({
   },
 
   render: function() {
-    var { players, selectedPlayerId } = this.props;
+    var players = this.props.players;
+    var selectedPlayerId = this.props.selectedPlayerId;
     var other = _.omit(this.props, 'players', 'selectedPlayerId');
 
     var playerNodes = players.map(function(player, index) {
